@@ -7,8 +7,11 @@ public class UserValidation {
     {
         return Pattern.matches("^[A-Z]{1}[a-z]{2,}", firstName);
 
-
-
-
     }
+    //UC-2: validating last name
+    public static boolean validateLastName(String lastName)
+    {
+        return Pattern.matches("^[A-Z]{1}[a-z]{2,}", lastName);
+    }
+
 }

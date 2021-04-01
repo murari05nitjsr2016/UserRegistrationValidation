@@ -19,6 +19,28 @@ public class UserValidationTest {
         System.out.println(result);
         Assertions.assertEquals(false,false);
     }
+    @Test
+    public void givenLastName_WhereProper_ShouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result =userValidation.validateLastName("Kumar");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
+    }
+    @Test
+    public void givenLastName_WhereShort_ShouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result =userValidation.validateLastName("Ku");
+        System.out.println(result);
+        Assertions.assertEquals(false,result);
+    }
+    @Test
+    public void givenLastName_WhereEmpty_ShouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result =userValidation.validateLastName("");
+        System.out.println(result);
+        Assertions.assertEquals(false,result);
+    }
+
 
 
 
