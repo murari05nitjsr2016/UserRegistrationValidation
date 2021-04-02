@@ -4,6 +4,8 @@ import com.userregistrationvalidation.UserValidation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
+
 public class UserValidationTest {
     @Test
     public void givenFirstName_WhereProper_ShouldReturnTrue(){
@@ -69,7 +71,14 @@ public class UserValidationTest {
         System.out.println(result);
         Assertions.assertEquals(true,result);
     }
-    
+    @Test
+    public void givenPassword_whereProper_shouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validatePassWord("Murariku@123");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
+    }
+
 
 
 

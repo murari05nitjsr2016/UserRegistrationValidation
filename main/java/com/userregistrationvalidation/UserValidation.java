@@ -23,6 +23,13 @@ public class UserValidation {
     {
         return Pattern.matches("^[91]{2}[0-9]{10}",phoneNumber);
     }
+    //UC-5: validating password
+    public static boolean validatePassWord(String passWord)
+    {
+        //    * Rule1: minimum 8 characters
+        return Pattern.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}", passWord);
+
+    }
 
 
 
