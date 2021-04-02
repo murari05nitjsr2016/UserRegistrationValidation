@@ -78,6 +78,13 @@ public class UserValidationTest {
         System.out.println(result);
         Assertions.assertEquals(true,result);
     }
+    @Test
+    public void givenPassword_whereNotProper_shouldReturnFalse(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validatePassWord2("Mura@1");
+        System.out.println(result);
+        Assertions.assertEquals(false,result);
+    }
 
 
 
