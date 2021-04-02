@@ -37,6 +37,19 @@ public class UserValidation {
         return Pattern.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}", passWord);
 
     }
+    public static boolean validatePassWord3(String passWord)
+    {
+        /*
+         * Rule1: minimum 8 characters
+         * Rule2: at least 1 upper-case
+         * Rule3: at least 1 numeric
+         */
+        return Pattern.matches("(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}", passWord);
+
+    }
+
+
+
 
 
 

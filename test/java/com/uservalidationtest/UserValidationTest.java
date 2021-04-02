@@ -85,6 +85,13 @@ public class UserValidationTest {
         System.out.println(result);
         Assertions.assertEquals(false,result);
     }
+    @Test
+    public void givenPassword_wherePerfect_shouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validatePassWord3("Murariku@123");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
+    }
 
 
 
