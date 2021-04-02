@@ -18,6 +18,11 @@ public class UserValidation {
     {
         return Pattern.matches("[-a-zA-Z0-9+]+.[-a-zA-Z0-9]*@[a-zA-Z0-9]+(.[a-zA-Z0-9]+)*.[a-zA-Z]{2,}$", email);
     }
+    //UC-4: validating predefined mobile number
+    public static boolean validatePhoneNumber(String phoneNumber)
+    {
+        return Pattern.matches("^[91]{2}[0-9]{10}",phoneNumber);
+    }
 
 
 

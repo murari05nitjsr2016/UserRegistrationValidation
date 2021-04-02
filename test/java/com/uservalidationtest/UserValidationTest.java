@@ -62,6 +62,14 @@ public class UserValidationTest {
         System.out.println(result);
         Assertions.assertEquals(false, false);
     }
+    @Test
+    public void givenMobile_WhereProper_shouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validatePhoneNumber("918709628464");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
+    }
+    
 
 
 
