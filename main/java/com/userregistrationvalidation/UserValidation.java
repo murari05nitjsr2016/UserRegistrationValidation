@@ -13,5 +13,12 @@ public class UserValidation {
     {
         return Pattern.matches("^[A-Z]{1}[a-z]{2,}", lastName);
     }
+    //UC-3: validating email
+    public static boolean validateEmail(String email)
+    {
+        return Pattern.matches("[-a-zA-Z0-9+]+.[-a-zA-Z0-9]*@[a-zA-Z0-9]+(.[a-zA-Z0-9]+)*.[a-zA-Z]{2,}$", email);
+    }
+
+
 
 }

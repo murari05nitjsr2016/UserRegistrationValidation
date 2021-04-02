@@ -15,9 +15,16 @@ public class UserValidationTest {
     @Test
     public void givenFirstName_WhereShort_ShouldReturnFalse(){
         UserValidation userValidation = new UserValidation();
-        boolean result = userValidation.validateFirstName("mu");
+        boolean result = userValidation.validateFirstName("m");
         System.out.println(result);
         Assertions.assertEquals(false,false);
+    }
+    @Test
+    public void givenFirstName_WhereShort_ShouldReturnFalse2(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validateFirstName("m");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
     }
     @Test
     public void givenLastName_WhereProper_ShouldReturnTrue(){
@@ -39,6 +46,21 @@ public class UserValidationTest {
         boolean result =userValidation.validateLastName("");
         System.out.println(result);
         Assertions.assertEquals(false,result);
+    }
+        @Test
+    public void givenEmail_whereProper_shouldReturnTrue(){
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validateEmail("abc.xyz@bl.co.in");
+        System.out.println(result);
+        Assertions.assertEquals(true,result);
+
+        }
+    @Test
+    public void givenEmail_whereNotProper_shouldReturnFalse() {
+        UserValidation userValidation = new UserValidation();
+        boolean result = userValidation.validateEmail("abc.");
+        System.out.println(result);
+        Assertions.assertEquals(false, false);
     }
 
 
